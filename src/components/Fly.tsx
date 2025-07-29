@@ -1,4 +1,3 @@
-import React from "react";
 import { Box,List, ListItem, ListItemAvatar,Avatar, ListItemText, Typography } from "@mui/material";
 import type { Result } from "../types/Global";
 

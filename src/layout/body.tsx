@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useEffect} from "react";
+import React, { useMemo, useState} from "react";
 import { Box,Button } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import Origen from "../components/Origen";

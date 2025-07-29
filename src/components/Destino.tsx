@@ -53,7 +53,7 @@ const Destino: React.FC<DestinoProps> = ({setGetFlightsDto}) =>{
         autoHighlight
         getOptionLabel={(option) => option.city}
         value={selected}
-        onChange={(event, newValue) => {
+        onChange={(_, newValue) => {
             setSelected(newValue);
         }}
         renderOption={(props, option) => {

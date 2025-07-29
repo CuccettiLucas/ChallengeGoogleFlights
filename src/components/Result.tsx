@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import type { SearchFlightsDto } from "../types/Global";
+import type { SearchFlightsDto, Result } from "../types/Global";
 import Fly from "./Fly";
 
 interface ResultProps{
@@ -16,7 +16,7 @@ export default function Result ({getFlightsDto}:ResultProps){
                 Flights.length > 0 ?
                     Flights.map((f,key)=>(
                         <div key={key}>
-                            {f.results.map((r,i)=>(
+                            {f.results.map((r:Result,i:number)=>(
                                 <Fly 
                                     key={i}
                                     fly={r}

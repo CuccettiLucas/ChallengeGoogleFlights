@@ -1,5 +1,4 @@
-import * as React from "react";
-import TextField from "@mui/material/TextField";
+import React from "react";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
@@ -13,7 +12,7 @@ interface DateProps{
 
 const DateRange:React.FC<DateProps> = ({setGetFlightsDto})=>{
   const [departureDate, setDepartureDate] = React.useState<Dayjs | null>(null);
-  const [returnDate, setReturnDate] = React.useState(null);
+  const [returnDate, setReturnDate] = React.useState<Dayjs | null>(null);
 
   React.useEffect(() =>{
     if (departureDate) {
@@ -40,13 +39,13 @@ const DateRange:React.FC<DateProps> = ({setGetFlightsDto})=>{
           label="Salida"
           value={departureDate}
           onChange={(newValue) => setDepartureDate(newValue)}
-          renderInput={(params) => <TextField {...params} />}
+          slotProps={{ textField: { fullWidth: true } }}
         />
         <DatePicker
           label="Regreso"
           value={returnDate}
           onChange={(newValue) => setReturnDate(newValue)}
-          renderInput={(params) => <TextField {...params} />}
+          slotProps={{ textField: { fullWidth: true } }}
         />
       </Box>
     </LocalizationProvider>

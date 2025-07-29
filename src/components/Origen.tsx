@@ -1,4 +1,4 @@
-import React, { useEffect, useState, type Dispatch } from "react";
+import React, { useEffect, useState} from "react";
 import {Autocomplete, TextField, Box} from '@mui/material';
 import useGetAirport from "../hooks/useGetAirport";
 import type { Airport, GetFlightsDto } from "../types/Global";
@@ -53,7 +53,7 @@ const Origen:React.FC<OrigenProps> = ({setGetFlightsDto}) =>{
         autoHighlight
         getOptionLabel={(option) => option.city}
         value={selected}
-        onChange={(event, newValue) => {
+        onChange={(_, newValue) => {
             setSelected(newValue);
         }}
         renderOption={(props, option) => {
